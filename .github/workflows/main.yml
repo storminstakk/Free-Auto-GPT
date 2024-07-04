@@ -1,0 +1,129 @@
+            - name: Vercel Actions
+  # You may pin to the exact commit or the version.
+  # uses: nexterias/actions-vercel@8105e682d635529a5aa77c44d131303c7a500e03
+  uses: nexterias/actions-vercel@v1.2.1
+  with:
+    # Vercel token: https://vercel.com/account/tokens
+    token: 
+    # Vercel project ID
+    project-id: 
+    # User ID within Vercel
+    org-id: 
+    # Personal Access Token (PAT) is used to create commit status and deployments.
+    github-token: # optional, default is ${{ github.token }}
+    # Create a production deployment
+    production: # optional, default is false
+    # Use the --prebuilt option
+    prebuilt: # optional, default is false
+    # Current Working Directory (default: process.cwd())
+    cwd: # optional
+    # Assign domains (multiple domains can be specified)
+    domain-alias: # optional
+    # Name for the target deployment environment
+    github-deployment-environment: # optional
+    # Deployment is public (`/_src` is exposed)
+    public: # optional, default is false
+    # Similar to env option but for build time only.
+    build-env: # optional
+    # Include an env var during run time
+    env: # optional
+
+            - name: Vercel Set Environment Variables
+  # You may pin to the exact commit or the version.
+  # uses: dkershner6/vercel-set-env-action@fbfd8b58f63a5a769e39ed46f593b4fb7607ea4c
+  uses: dkershner6/vercel-set-env-action@v3
+  with:
+    # Vercel API Token
+    token: 
+    # Vercel API Team ID - used to target a Team or Organization, default is personal
+    teamId: # optional
+    # The name of the project in Vercel
+    projectName: 
+    # A comma delimited list of environment variable keys. This must be accompanied by a matching env variable and ones prefixed with TARGET_ and TYPE_. These match target and type in Vercel.
+    envVariableKeys: 
+          
+            - name: Deploy to Vercel Action Fixed
+  # You may pin to the exact commit or the version.
+  # uses: PhilGarb/deploy-to-vercel-action@fca0dd884c48c9e885ac0e66417c6e35387da39c
+  uses: PhilGarb/deploy-to-vercel-action@v1.9.8
+  with:
+    # GitHub Token which will be used to authenticate with the GitHub API.
+
+    GITHUB_TOKEN: # optional
+    # Vercel Token which will be used with the Vercel CLI.
+
+    VERCEL_TOKEN: # optional
+    # Id of your Vercel project (can be found in .vercel/project.json).
+
+    VERCEL_PROJECT_ID: # optional
+    # Id of your Vercel organisation (can be found in .vercel/project.json).
+
+    VERCEL_ORG_ID: # optional
+    # Create a production deployment (default: true, false for PR deployments).
+
+    PRODUCTION: # optional
+    # Create a deployment on GitHub (default: true).
+
+    GITHUB_DEPLOYMENT: # optional
+    # Create PR comment when deploying (default: true).
+
+    CREATE_COMMENT: # optional
+    # Delete existing PR comment when redeploying PR (default: true).
+
+    DELETE_EXISTING_COMMENT: # optional
+    # Attach metadata about the commit to the Vercel deployment (default: true).
+
+    ATTACH_COMMIT_METADATA: # optional
+    # Allow PRs which originate from a fork to be deployed (default: false).
+
+    DEPLOY_PR_FROM_FORK: # optional
+    # Labels which will be added to the pull request once deployed. Set it to false to turn off (default: deployed).
+
+    PR_LABELS: # optional
+    # Assign alias domain(s) to the deployment.
+
+    ALIAS_DOMAINS: # optional
+    # Assign a custom domain to the PR preview deployment.
+
+    PR_PREVIEW_DOMAIN: # optional
+    # Execute commands from a different Vercel team or user.
+
+    VERCEL_SCOPE: # optional
+    # Custom environment for GitHub deployment.
+
+    GITHUB_DEPLOYMENT_ENV: # optional
+    # When passing meta data to Vercel deployment, trim the commit message to subject only (default: false).
+
+    TRIM_COMMIT_MESSAGE: # optional
+    # Provide environment variables to the build step.
+
+    BUILD_ENV: # optional
+    # Working directory for the Vercel CLI
+
+    WORKING_DIRECTORY: # optional
+    # Skip the vercel cache
+
+    FORCE: # optional
+
+            - name: Simple Vercel Deploy
+  # You may pin to the exact commit or the version.
+  # uses: kik4/simple-vercel-deploy@b26e05a16e085b167c08fb51212aeef5cd64a659
+  uses: kik4/simple-vercel-deploy@v2.10.0
+  with:
+    # github token
+    github-token: 
+    # vercel token
+    vercel-token: 
+    # vercel team / personal id
+    vercel-org-id: 
+    # vercel project id
+    vercel-project-id: 
+    # production flag
+    is-production: # optional, default is false
+    # github comment flag
+    github-comment: # optional, default is true
+    # using rest api flag
+    uses-rest-api: # optional, default is false
+          
+    
+                  
